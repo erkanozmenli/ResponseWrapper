@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "388fdb70-9269-4f15-9c12-223fdb4b723f",
+		"name": "WrapperTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29140860"
+	},
+	"item": [
+		{
+			"name": "Ok",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/WeatherForecast/GetWeatherForecast",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"WeatherForecast",
+						"GetWeatherForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/WeatherForecast/ExceptionTest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"WeatherForecast",
+						"ExceptionTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NoContent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/WeatherForecast/NoContentTest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"WeatherForecast",
+						"NoContentTest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NotFound",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/WeatherForecast/NotFoundTest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"WeatherForecast",
+						"NotFoundTest"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:7288/api",
+			"type": "string"
+		}
+	]
+}
